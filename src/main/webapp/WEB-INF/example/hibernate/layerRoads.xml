@@ -85,7 +85,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	</bean>
 
 	<bean class="org.geomajas.configuration.FeatureInfo" name="layerRoadsFeatureInfo">
-		<property name="dataSourceName" value="org.geomajaas.server.Road" />
+		<property name="dataSourceName" value="org.mypackage.server.Road" />
 		<property name="identifier">
 			<bean class="org.geomajas.configuration.PrimitiveAttributeInfo">
 				<property name="label" value="id" />

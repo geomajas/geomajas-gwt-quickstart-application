@@ -8,7 +8,7 @@
  * by the Geomajas Contributors License Agreement. For full licensing
  * details, see LICENSE.txt in the project root.
  */
-package org.geomajaas.client;
+package org.mypackage.client;
 
 import org.geomajas.command.CommandResponse;
 import org.geomajas.command.dto.TransformGeometryRequest;

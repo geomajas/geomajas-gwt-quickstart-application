@@ -9,7 +9,7 @@
  * details, see LICENSE.txt in the project root.
  */
 
-package org.geomajaas.client;
+package org.mypackage.client;
 
 import com.google.gwt.user.client.Cookies;
 import com.smartgwt.client.types.Alignment;
@@ -21,7 +21,6 @@ import org.geomajas.gwt.client.command.GwtCommandDispatcher;
 import org.geomajas.gwt.client.i18n.I18nProvider;
 import org.geomajas.gwt.client.map.event.MapModelChangedEvent;
 import org.geomajas.gwt.client.map.event.MapModelChangedHandler;
-import org.geomajas.gwt.client.map.layer.Layer;
 import org.geomajas.gwt.client.util.CrocEyeNotificationHandler;
 import org.geomajas.gwt.client.util.Log;
 import org.geomajas.gwt.client.util.Notify;
@@ -36,9 +35,6 @@ import org.geomajas.widget.advancedviews.client.widget.ExpandingThemeWidget;
 import org.geomajas.widget.advancedviews.configuration.client.ThemesInfo;
 import org.geomajas.widget.featureinfo.client.widget.DockableWindow;
 import org.geomajas.widget.layer.client.widget.CombinedLayertree;
-import org.geomajas.widget.layer.configuration.client.ClientBranchNodeInfo;
-import org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo;
-import org.geomajas.widget.layer.configuration.client.ClientLayerTreeInfo;
 import org.geomajas.widget.searchandfilter.client.util.GsfLayout;
 import org.geomajas.widget.searchandfilter.client.util.SearchCommService;
 import org.geomajas.widget.searchandfilter.client.widget.attributesearch.AttributeSearchCreator;

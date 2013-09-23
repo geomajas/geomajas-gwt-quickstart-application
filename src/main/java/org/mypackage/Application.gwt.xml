@@ -37,5 +37,5 @@
 	<inherits name="org.geomajas.widget.layer.Layer" />
 
 
-	<entry-point class="org.geomajaas.client.Application"/>
+	<entry-point class="org.mypackage.client.Application"/>
 </module>

@@ -369,7 +369,7 @@
 					<disableCastChecking>true</disableCastChecking>
 					<disableClassMetadata>true</disableClassMetadata>
 					<extraJvmArgs>-Xmx1200M -Xss1024k</extraJvmArgs>
-					<module>org.geomajaas.Application</module>
+					<module>org.mypackage.Application</module>
 					<runTarget>index.html</runTarget>
 					<hostedWebapp>${project.build.directory}/${project.build.finalName}</hostedWebapp>
 					<copyWebapp>true</copyWebapp>

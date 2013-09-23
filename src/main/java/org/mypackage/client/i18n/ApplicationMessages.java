@@ -9,7 +9,7 @@
  * details, see LICENSE.txt in the project root.
  */
 
-package org.geomajaas.client.i18n;
+package org.mypackage.client.i18n;
 
 import com.google.gwt.i18n.client.Messages;
 

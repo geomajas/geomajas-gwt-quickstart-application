@@ -9,7 +9,7 @@
  * details, see LICENSE.txt in the project root.
  */
 
-package org.geomajaas.server;
+package org.mypackage.server;
 
 import com.vividsolutions.jts.geom.Geometry;
 import org.hibernate.annotations.Type;
