@@ -31,6 +31,11 @@
                             <CssParameter name="stroke-width">1</CssParameter>
                         </Stroke>
                     </PolygonSymbolizer>
+ <TextSymbolizer>
+          <Label>
+            <ogc:PropertyName>NAME</ogc:PropertyName>
+          </Label>
+ </TextSymbolizer>
                 </Rule>
                 <Rule>
                     <Name>Small</Name>
@@ -146,6 +151,7 @@
                         </Stroke>
                     </PolygonSymbolizer>
                 </Rule>            </FeatureTypeStyle>
+
         </UserStyle>
     </NamedLayer>
 </StyledLayerDescriptor>
