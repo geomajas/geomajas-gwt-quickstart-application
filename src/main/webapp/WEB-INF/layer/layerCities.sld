@@ -9,25 +9,58 @@
             <Abstract>Cities of the world</Abstract>
             <FeatureTypeStyle>
                 <Rule>
-                    <Name>Cities</Name>
-<PointSymbolizer>
-   <Graphic>
-     <Mark>
-       <WellKnownName>circle</WellKnownName>
-       <Fill>
-         <CssParameter name="fill">#FFCC33</CssParameter>
-       </Fill>
-     </Mark>
-     <Size>6</Size>
-   </Graphic>
- </PointSymbolizer>
- <TextSymbolizer>
-          <Label>
-            <ogc:PropertyName>NAME</ogc:PropertyName>
-          </Label>
- </TextSymbolizer>
+                    <Name>Capital city</Name>
+                    <Title>Capital city</Title>
+                    <ogc:Filter>
+                        <ogc:PropertyIsEqualTo>
+                            <ogc:PropertyName>CAPITAL</ogc:PropertyName>
+                            <ogc:Literal>Y</ogc:Literal>
+                        </ogc:PropertyIsEqualTo>
+                    </ogc:Filter>
+                    <PointSymbolizer>
+                       <Graphic>
+                         <Mark>
+                           <WellKnownName>square</WellKnownName>
+                           <Fill>
+                             <CssParameter name="fill">#D40863</CssParameter>
+                           </Fill>
+                         </Mark>
+                         <Size>8</Size>
+                       </Graphic>
+                     </PointSymbolizer>
+                     <TextSymbolizer>
+                              <Label>
+                                <ogc:PropertyName>NAME</ogc:PropertyName>
+                              </Label>
+                     </TextSymbolizer>
                  </Rule>
-           </FeatureTypeStyle>
+                <Rule>
+                    <Name>Other cities</Name>
+                    <Title>Other cities</Title>
+                    <ogc:Filter>
+                        <ogc:PropertyIsEqualTo>
+                            <ogc:PropertyName>CAPITAL</ogc:PropertyName>
+                            <ogc:Literal>N</ogc:Literal>
+                        </ogc:PropertyIsEqualTo>
+                    </ogc:Filter>
+                    <PointSymbolizer>
+                        <Graphic>
+                            <Mark>
+                                <WellKnownName>circle</WellKnownName>
+                                <Fill>
+                                    <CssParameter name="fill">#FFCC33</CssParameter>
+                                </Fill>
+                            </Mark>
+                            <Size>6</Size>
+                        </Graphic>
+                    </PointSymbolizer>
+                    <TextSymbolizer>
+                        <Label>
+                            <ogc:PropertyName>NAME</ogc:PropertyName>
+                        </Label>
+                    </TextSymbolizer>
+                </Rule>
+            </FeatureTypeStyle>
         </UserStyle>
     </NamedLayer>
 </StyledLayerDescriptor>

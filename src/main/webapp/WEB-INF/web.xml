@@ -33,6 +33,8 @@
 			WEB-INF/layer/layerOsm.xml
 			WEB-INF/layer/layerCountries.xml
 			WEB-INF/layer/clientLayerCountries.xml
+            WEB-INF/layer/layerSimplifiedCountries.xml
+            WEB-INF/layer/clientLayerSimplifiedCountries.xml
             WEB-INF/layer/layerCities.xml
             WEB-INF/layer/clientLayerCities.xml
 			WEB-INF/widget/layerTree.xml

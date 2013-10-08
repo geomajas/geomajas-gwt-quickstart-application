@@ -191,6 +191,12 @@
 			<artifactId>geomajas-widget-searchandfilter-gwt</artifactId>
 		</dependency>
 
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-wfs</artifactId>
+            <version>${geotools-version}</version>
+        </dependency>
+
 		<!-- Hibernate layer can be removed if not needed, but the "Road" class needs the Hibernate stuff -->
 		<dependency>
 			<groupId>org.geomajas.plugin</groupId>
