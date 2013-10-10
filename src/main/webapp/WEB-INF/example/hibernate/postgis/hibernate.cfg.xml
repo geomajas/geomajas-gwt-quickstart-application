@@ -22,7 +22,7 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">false</property>
 		
-		<mapping class="org.geomajaas.server.Road" />
+		<mapping class="org.mypackage.server.Road" />
 		
 	</session-factory>
 </hibernate-configuration>

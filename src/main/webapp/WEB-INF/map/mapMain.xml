@@ -41,7 +41,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 		<property name="panButtonsEnabled" value="false" />
 		<property name="scaleConfiguration">
 			<bean class="org.geomajas.configuration.client.ScaleConfigurationInfo">
-				<property name="maximumScale" value="1:10000" />
+				<!--<property name="maximumScale" value="1:10000" />-->
 				<property name="zoomLevels">
 					<list>
 						<value>6.388019798183263E-6</value>
@@ -80,7 +80,9 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 		<property name="layers">
 			<list>
 				<ref bean="clientLayerOsm" />
-				<ref bean="clientLayerCountries" />
+                <ref bean="clientLayerSimplifiedCountries" />
+                <ref bean="clientLayerCountries" />
+                <ref bean="clientLayerCities" />
 			</list>
 		</property>
 		<property name="widgetInfo">

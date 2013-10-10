@@ -33,6 +33,10 @@
 			WEB-INF/layer/layerOsm.xml
 			WEB-INF/layer/layerCountries.xml
 			WEB-INF/layer/clientLayerCountries.xml
+            WEB-INF/layer/layerSimplifiedCountries.xml
+            WEB-INF/layer/clientLayerSimplifiedCountries.xml
+            WEB-INF/layer/layerCities.xml
+            WEB-INF/layer/clientLayerCities.xml
 			WEB-INF/widget/layerTree.xml
 			WEB-INF/widget/ribbonToolbar.xml
 			WEB-INF/widget/themeSelection.xml
@@ -76,7 +80,7 @@
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/d/*</url-pattern>
-        <url-pattern>/test/*</url-pattern>
+        <url-pattern>/application/*</url-pattern>
     </servlet-mapping>
 
 	<welcome-file-list>

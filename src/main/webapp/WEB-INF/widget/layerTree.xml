@@ -37,6 +37,14 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 								class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 							<property name="layerId" value="clientLayerCountries" />
 						</bean>
+                        <bean
+                                class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
+                            <property name="layerId" value="clientLayerSimplifiedCountries" />
+                        </bean>
+                        <bean
+                                class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
+                            <property name="layerId" value="clientLayerCities" />
+                        </bean>
 					</list>
 				</property>
 			</bean>
