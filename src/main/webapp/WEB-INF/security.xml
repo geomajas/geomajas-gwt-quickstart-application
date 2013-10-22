@@ -22,12 +22,12 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
 	<!-- Replace security context by our implementation. -->
 	<!-- @extract-start ReplaceSecurityContext, Replace security context by version which includes custom policies -->
-    <!--	<bean name="security.SecurityManager"
-              class="org.geomajas.plugin.staticsecurity.gwt.example.server.security.AppSecurityManager" />
-        <bean name="security.SecurityContext" scope="thread"
-              class="org.geomajas.plugin.staticsecurity.gwt.example.server.security.AppSecurityContext">
+    	<!--<bean name="security.SecurityManager"
+              class="org.mypackage.server.security.AppSecurityManager" />
+        <bean name="security.SecurityContext"
+              class="org.geomajas.internal.security.DefaultSecurityContext">
             <aop:scoped-proxy/>
-          </bean>    -->
+          </bean>-->
 	<!-- @extract-end -->
 
 	<!-- @extract-start UseStaticsecurity, Enabling the use of staticsecurity-->
@@ -100,87 +100,32 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 					<property name="userId" value="luc"/>
 					<property name="password" value="b7NMSP1pZN3Hi6nJGVe9JA"/> <!-- "luc" -->
 					<property name="userName" value="Luc Van Lierde"/>
-					<property name="authorizations">
-						<list>
-							<bean class="org.geomajas.plugin.staticsecurity.gwt.example.server.security.AppAuthorizationInfo">
-								<property name="commandsInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-								<property name="toolsInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-								<property name="visibleLayersInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-								<property name="updateAuthorizedLayersInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-								<property name="createAuthorizedLayersInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-								<property name="deleteAuthorizedLayersInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-								<property name="blablaButtonAllowed" value="true" />
-							</bean>
-						</list>
-					</property>
+                    <property name="roles">
+                        <list>
+                            <ref bean="owner"/>
+                        </list>
+                    </property>
 				</bean>
 				<!-- @extract-skip-start -->
 				<bean class="org.geomajas.plugin.staticsecurity.configuration.UserInfo">
 					<property name="userId" value="marino"/>
 					<property name="password" value="kMSqVf2EMWilIKhZyV3dKA"/> <!-- "marino" -->
 					<property name="userName" value="Marino Van Hoenacker"/>
-					<property name="authorizations">
-						<list>
-							<bean class="org.geomajas.plugin.staticsecurity.gwt.example.server.security.AppAuthorizationInfo">
-								<property name="commandsInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-								<property name="toolsInclude">
-									<list>
-										<value>ZoomToRectangleMode</value>
-									</list>
-								</property>
-								<property name="visibleLayersInclude">
-									<list>
-										<value>layerOsm</value>
-									</list>
-								</property>
-								<property name="blablaButtonAllowed" value="false" />
-							</bean>
-						</list>
-					</property>
+                    <property name="roles">
+                        <list>
+                            <ref bean="guest"/>
+                        </list>
+                    </property>
 				</bean>
 				<bean class="org.geomajas.plugin.staticsecurity.configuration.UserInfo">
 					<property name="userId" value="empty"/>
 					<property name="password" value="fV4OclpOUTCXIXEOx1C6sQ"/> <!-- "" -->
 					<property name="userName" value="Mr. Nobody"/>
-					<property name="authorizations">
-						<list>
-							<bean class="org.geomajas.plugin.staticsecurity.configuration.LayerAuthorizationInfo">
-								<property name="commandsInclude">
-									<list>
-										<value>.*</value>
-									</list>
-								</property>
-							</bean>
-						</list>
-					</property>
+                    <property name="roles">
+                        <list>
+                            <ref bean="guest"/>
+                        </list>
+                    </property>
 				</bean>
 				<!-- @extract-skip-end -->
 			</list>

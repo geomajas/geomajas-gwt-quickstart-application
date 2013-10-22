@@ -37,11 +37,15 @@
             WEB-INF/layer/clientLayerSimplifiedCountries.xml
             WEB-INF/layer/layerCities.xml
             WEB-INF/layer/clientLayerCities.xml
+            WEB-INF/layer/layerCountriesWithFlag.xml
+            WEB-INF/layer/clientLayerCountriesWithFlag.xml
 			WEB-INF/widget/layerTree.xml
 			WEB-INF/widget/ribbonToolbar.xml
 			WEB-INF/widget/themeSelection.xml
+            WEB-INF/security.xml
 
-		</param-value>
+
+			</param-value>
 	</context-param>
 
 	<filter>
