@@ -35,8 +35,13 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		<property name="loopAllServices" value="false"/>
 		<property name="securityServices">
 			<list>
-				<bean class="org.geomajas.plugin.staticsecurity.security.StaticSecurityService"/>
-				<bean class="org.geomajas.plugin.staticsecurity.security.LoginAllowedSecurityService"/>
+                <!--start disable security-->
+                <bean class="org.geomajas.security.allowall.AllowAllSecurityService" />
+                <!--end disable security-->
+                <!--start enable security-->
+				<!--<bean class="org.geomajas.plugin.staticsecurity.security.StaticSecurityService"/>-->
+				<!--<bean class="org.geomajas.plugin.staticsecurity.security.LoginAllowedSecurityService"/>-->
+                <!--end enable security-->
 			</list>
 		</property>
 	</bean>
