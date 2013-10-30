@@ -43,7 +43,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
                         <!-- <bean
                                 class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
-                            <property name="layerId" value="clientLayerSimplifiedCountries" />
+                            <property name="layerId" value="clientLayerSimplifiedCountriesWfs" />
                         </bean>  -->
 						<!--<bean
 								class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">

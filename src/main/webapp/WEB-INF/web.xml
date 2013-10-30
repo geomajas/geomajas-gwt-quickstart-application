@@ -28,10 +28,12 @@
 			WEB-INF/applicationContext.xml
 			WEB-INF/tools.xml
 			WEB-INF/map/mapMain.xml
-			WEB-INF/map/mapOverview.xml
-			WEB-INF/layer/clientLayerOsm.xml
-			WEB-INF/layer/layerOsm.xml
 
+			<!-- OSM layer -->
+			WEB-INF/layer/OSM/clientLayerOsm.xml
+			WEB-INF/layer/OSM/layerOsm.xml
+
+			<!-- TMS layer -->
             WEB-INF/layer/TMS/clientLayerSimplifiedCountriesTms.xml
             WEB-INF/layer/TMS/layerSimplifiedCountriesTms.xml
 
@@ -39,19 +41,25 @@
             WEB-INF/layer/WMS/clientLayerSimplifiedCountriesWms.xml
             WEB-INF/layer/WMS/layerSimplifiedCountriesWms.xml
 
-			WEB-INF/layer/layerCountries.xml
-			WEB-INF/layer/clientLayerCountries.xml
-            WEB-INF/layer/layerSimplifiedCountries.xml
-            WEB-INF/layer/clientLayerSimplifiedCountries.xml
-            WEB-INF/layer/layerCities.xml
-            WEB-INF/layer/clientLayerCities.xml
-            WEB-INF/layer/layerCountriesWithFlag.xml
-            WEB-INF/layer/clientLayerCountriesWithFlag.xml
+			<!-- WFS layer -->
+            WEB-INF/layer/WFS/layerSimplifiedCountriesWfs.xml
+            WEB-INF/layer/WFS/clientLayerSimplifiedCountriesWfs.xml
+
+			<!-- layers based on a SHP file -->
+			WEB-INF/layer/SHP/layerCountries.xml
+			WEB-INF/layer/SHP/clientLayerCountries.xml
+			WEB-INF/layer/SHP/layerCities.xml
+            WEB-INF/layer/SHP/clientLayerCities.xml
+            WEB-INF/layer/SHP/layerCountriesWithFlag.xml
+            WEB-INF/layer/SHP/clientLayerCountriesWithFlag.xml
+
+			<!-- widgets -->
 			WEB-INF/widget/layerTree.xml
 			WEB-INF/widget/ribbonToolbar.xml
 			WEB-INF/widget/themeSelection.xml
-            WEB-INF/security.xml
 
+			<!-- security -->
+            WEB-INF/security.xml
 
 			</param-value>
 	</context-param>

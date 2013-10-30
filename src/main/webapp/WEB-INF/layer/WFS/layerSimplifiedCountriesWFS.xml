@@ -20,7 +20,7 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-2.5.xsd"
         >
 
-    <bean name="layerSimplifiedCountries" class="org.geomajas.layer.geotools.GeoToolsLayer">
+    <bean name="layerSimplifiedCountriesWfs" class="org.geomajas.layer.geotools.GeoToolsLayer">
         <property name="parameters">
             <list>
                 <bean class="org.geomajas.configuration.Parameter">
