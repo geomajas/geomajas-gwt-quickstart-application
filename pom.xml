@@ -183,6 +183,11 @@
 			<groupId>org.geomajas.plugin</groupId>
 			<artifactId>geomajas-plugin-printing-gwt</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.geomajas.plugin</groupId>
+            <artifactId>geomajas-layer-tms</artifactId>
+        </dependency>
+
 		<!-- extra functionality -->
 		<dependency>
 			<groupId>org.geomajas.widget</groupId>

@@ -79,7 +79,8 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 		</property>
 		<property name="layers">
 			<list>
-				<ref bean="clientLayerOsm" />
+				<!-- <ref bean="clientLayerOsm" />    -->
+                <ref bean="clientLayerSimplifiedCountriesTms" />
                 <!--<ref bean="clientLayerSimplifiedCountries" />-->
                 <!--<ref bean="clientLayerCountries" />-->
                 <ref bean="clientLayerCountriesWithFlag" />

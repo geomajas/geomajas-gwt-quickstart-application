@@ -31,6 +31,10 @@
 			WEB-INF/map/mapOverview.xml
 			WEB-INF/layer/clientLayerOsm.xml
 			WEB-INF/layer/layerOsm.xml
+
+            WEB-INF/layer/TMS/clientLayerSimplifiedCountriesTms.xml
+            WEB-INF/layer/TMS/layerSimplifiedCountriesTms.xml
+
 			WEB-INF/layer/layerCountries.xml
 			WEB-INF/layer/clientLayerCountries.xml
             WEB-INF/layer/layerSimplifiedCountries.xml
