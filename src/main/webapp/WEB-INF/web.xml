@@ -35,6 +35,10 @@
             WEB-INF/layer/TMS/clientLayerSimplifiedCountriesTms.xml
             WEB-INF/layer/TMS/layerSimplifiedCountriesTms.xml
 
+			<!-- WMS layer -->
+            WEB-INF/layer/WMS/clientLayerSimplifiedCountriesWms.xml
+            WEB-INF/layer/WMS/layerSimplifiedCountriesWms.xml
+
 			WEB-INF/layer/layerCountries.xml
 			WEB-INF/layer/clientLayerCountries.xml
             WEB-INF/layer/layerSimplifiedCountries.xml
