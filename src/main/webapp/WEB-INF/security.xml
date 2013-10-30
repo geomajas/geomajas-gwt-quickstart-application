@@ -20,17 +20,6 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-	<!-- Replace security context by our implementation. -->
-	<!-- @extract-start ReplaceSecurityContext, Replace security context by version which includes custom policies -->
-    	<!--<bean name="security.SecurityManager"
-              class="org.mypackage.server.security.AppSecurityManager" />
-        <bean name="security.SecurityContext"
-              class="org.geomajas.internal.security.DefaultSecurityContext">
-            <aop:scoped-proxy/>
-          </bean>-->
-	<!-- @extract-end -->
-
-	<!-- @extract-start UseStaticsecurity, Enabling the use of staticsecurity-->
 	<bean name="security.securityInfo" class="org.geomajas.security.SecurityInfo">
 		<property name="loopAllServices" value="false"/>
 		<property name="securityServices">
@@ -45,7 +34,6 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 			</list>
 		</property>
 	</bean>
-	<!-- @extract-end -->
 
     <bean name="owner" class="org.geomajas.plugin.staticsecurity.configuration.NamedRoleInfo">
         <property name="authorizations">
@@ -96,7 +84,6 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         </property>
     </bean>
 
-    <!-- @extract-start CustomPolicyUse, A configuration using the custom policy -->
 	<bean class="org.geomajas.plugin.staticsecurity.configuration.SecurityServiceInfo">
 		<property name="tokenLifetime" value="600" /> <!-- ten minutes -->
 		<property name="users">
@@ -111,7 +98,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
                         </list>
                     </property>
 				</bean>
-				<!-- @extract-skip-start -->
+
 				<bean class="org.geomajas.plugin.staticsecurity.configuration.UserInfo">
 					<property name="userId" value="marino"/>
 					<property name="password" value="kMSqVf2EMWilIKhZyV3dKA"/> <!-- "marino" -->
@@ -132,10 +119,9 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
                         </list>
                     </property>
 				</bean>
-				<!-- @extract-skip-end -->
+
 			</list>
 		</property>
 	</bean>
-	<!-- @extract-end -->
 
 </beans>
