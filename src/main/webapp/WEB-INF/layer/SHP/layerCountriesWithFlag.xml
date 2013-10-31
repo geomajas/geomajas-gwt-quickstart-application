@@ -125,7 +125,7 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd"
                     <property name="name" value="FLAG"/>
                     <property name="editable" value="false"/>
                     <property name="identifying" value="false"/>
-                    <property name="hidden" value="true"/>
+                    <!--<property name="hidden" value="true"/>-->
                     <property name="type" value="STRING"/>
                 </bean>
             </list>

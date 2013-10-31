@@ -151,7 +151,7 @@
 					<Title>Label for all countries</Title>
 					<TextSymbolizer>
 							  <Label>
-								<ogc:PropertyName>FLAG</ogc:PropertyName>
+								<ogc:PropertyName>admin</ogc:PropertyName>
 							  </Label>
 					 </TextSymbolizer>
 

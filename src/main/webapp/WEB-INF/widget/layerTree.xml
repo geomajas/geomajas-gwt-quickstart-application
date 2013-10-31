@@ -29,17 +29,17 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 				<property name="expanded" value="true" />
 				<property name="treeNodes">
 					<list>
-						<!-- <bean
+						<bean
 								class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 							<property name="layerId" value="clientLayerOsm" />
-						</bean> -->
+						</bean>
 						<!-- <bean class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 								<property name="layerId" value="clientLayerSimplifiedCountriesTms" />
 							</bean>   -->
 
-						<bean class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
+						<!--<bean class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 							<property name="layerId" value="clientLayerSimplifiedCountriesWms" />
-						</bean>
+						</bean> -->
 
                         <!-- <bean
                                 class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
