@@ -22,7 +22,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
 	<bean class="org.geomajas.configuration.client.ClientVectorLayerInfo"
 		id="clientLayerCarbonEmission">
-		<property name="serverLayerId" value="layerCarbonEmmission" />
+		<property name="serverLayerId" value="layerCarbonEmission" />
 		<property name="label" value="CarbonEmission" />
 		<property name="visible" value="true" />
 		<property name="maximumScale" value="1:1000" />
@@ -32,7 +32,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 				<bean class="org.geomajas.configuration.SnappingRuleInfo">
 					<property name="distance" value="10000" />
 					<property name="type" value="NEAREST_POINT" />
-					<property name="layerId" value="countriesLayer" />
+					<property name="layerId" value="carbonEmissionLayer" />
 				</bean>
 			</list>
 		</property>
