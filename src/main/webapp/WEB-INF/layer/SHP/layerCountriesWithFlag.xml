@@ -65,7 +65,7 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd"
             <list>
                 <bean class="org.geomajas.configuration.PrimitiveAttributeInfo">
                     <property name="label" value="Name"/>
-                    <property name="name" value="admin"/>
+                    <property name="name" value="ADMIN"/>
                     <property name="editable" value="false"/>
                     <property name="identifying" value="true"/>
                     <property name="type" value="STRING"/>
@@ -79,14 +79,14 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd"
                 </bean>
                 <bean class="org.geomajas.configuration.PrimitiveAttributeInfo">
                     <property name="label" value="Continent"/>
-                    <property name="name" value="continent"/>
+                    <property name="name" value="CONTINENT"/>
                     <property name="editable" value="false"/>
                     <property name="identifying" value="false"/>
                     <property name="type" value="STRING"/>
                 </bean>
                 <bean class="org.geomajas.configuration.PrimitiveAttributeInfo">
                     <property name="label" value="Subregion"/>
-                    <property name="name" value="subregion"/>
+                    <property name="name" value="SUBREGION"/>
                     <property name="editable" value="false"/>
                     <property name="identifying" value="false"/>
                     <property name="type" value="STRING"/>
@@ -108,32 +108,32 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd"
                 </bean>
                 <bean class="org.geomajas.configuration.PrimitiveAttributeInfo">
                     <property name="label" value="Economy"/>
-                    <property name="name" value="economy"/>
+                    <property name="name" value="ECONOMY"/>
                     <property name="editable" value="false"/>
                     <property name="identifying" value="false"/>
                     <property name="type" value="STRING"/>
                 </bean>
                 <bean class="org.geomajas.configuration.PrimitiveAttributeInfo">
                     <property name="label" value="Income"/>
-                    <property name="name" value="income_grp"/>
+                    <property name="name" value="INCOME_GRP"/>
                     <property name="editable" value="false"/>
                     <property name="identifying" value="false"/>
                     <property name="type" value="STRING"/>
                 </bean>
                 <bean class="org.geomajas.configuration.PrimitiveAttributeInfo">
                     <property name="label" value="Flag"/>
-                    <property name="name" value="FLAG"/>
+                    <property name="name" value="FLAG200"/>
                     <property name="editable" value="false"/>
                     <property name="identifying" value="false"/>
                     <!--<property name="hidden" value="true"/>-->
-                    <property name="type" value="STRING"/>
+                    <property name="type" value="IMGURL"/>
                 </bean>
             </list>
         </property>
     </bean>
 
 	<bean class="org.geomajas.configuration.NamedStyleInfo" name="layerCountriesWithFlagStyleInfo">
-		<property name="sldLocation" value="WEB-INF/layer/layerCountriesWIthFlagPopulation.sld" />
+		<property name="sldLocation" value="WEB-INF/layer/layerCountriesWithFlagPopulation.sld" />
 	</bean>
 
 </beans>

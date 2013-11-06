@@ -151,7 +151,7 @@
 					<Title>Label for all countries</Title>
 					<TextSymbolizer>
 							  <Label>
-								<ogc:PropertyName>admin</ogc:PropertyName>
+								<ogc:PropertyName>ADMIN</ogc:PropertyName>
 							  </Label>
 					 </TextSymbolizer>
 
