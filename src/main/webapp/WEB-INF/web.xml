@@ -52,8 +52,6 @@
             WEB-INF/layer/SHP/clientLayerCities.xml
             WEB-INF/layer/SHP/layerCountriesWithFlag.xml
             WEB-INF/layer/SHP/clientLayerCountriesWithFlag.xml
-			WEB-INF/layer/SHP/layerCarbonEmission.xml
-			WEB-INF/layer/SHP/clientLayerCarbonEmission.xml
 
 			<!-- widgets -->
 			WEB-INF/widget/layerTree.xml

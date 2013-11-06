@@ -86,7 +86,6 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
                 <!--<ref bean="clientLayerCountries" />-->
                 <ref bean="clientLayerCountriesWithFlag" />
                 <ref bean="clientLayerCities" />
-                <ref bean="clientLayerCarbonEmission" />
 			</list>
 		</property>
 		<property name="widgetInfo">
