@@ -11,11 +11,14 @@
 
 package org.mypackage.client;
 
+import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Cookies;
 import com.smartgwt.client.types.Alignment;
 import com.smartgwt.client.types.Overflow;
 import com.smartgwt.client.widgets.Window;
+import com.smartgwt.client.widgets.layout.HLayout;
 import com.smartgwt.client.widgets.layout.Layout;
+import com.smartgwt.client.widgets.layout.VLayout;
 import org.geomajas.gwt.client.command.CommunicationExceptionCallback;
 import org.geomajas.gwt.client.command.GwtCommandDispatcher;
 import org.geomajas.gwt.client.i18n.I18nProvider;
@@ -27,10 +30,6 @@ import org.geomajas.gwt.client.util.Notify;
 import org.geomajas.gwt.client.util.WidgetLayout;
 import org.geomajas.gwt.client.widget.MapWidget;
 import org.geomajas.gwt.client.widget.OverviewMap;
-
-import com.google.gwt.core.client.EntryPoint;
-import com.smartgwt.client.widgets.layout.HLayout;
-import com.smartgwt.client.widgets.layout.VLayout;
 import org.geomajas.widget.advancedviews.client.widget.ExpandingThemeWidget;
 import org.geomajas.widget.advancedviews.configuration.client.ThemesInfo;
 import org.geomajas.widget.featureinfo.client.widget.DockableWindow;
@@ -70,8 +69,20 @@ public class Application implements EntryPoint {
 
 	private MultiFeatureListGrid searchResultGrid;
 
+//	@Autowired
+//	private SecurityServiceInfo secInfo;
+
 	public void onModuleLoad() {
 		initializeConstants();
+
+		// @extract-start TokenRequestHandler, Set the token request handler
+		GwtCommandDispatcher dispatcher = GwtCommandDispatcher.getInstance();
+
+		// start section "security enabled": this will show a login screen.
+//		dispatcher.setTokenRequestHandler(
+//				new StaticSecurityTokenRequestHandler(
+//						"Possible users are 'luc' and 'marino'. The password is the same as the login."));
+		// end section "security enabled"
 
 		// Build all layout blocks.
 		Layout header = createHeader();
@@ -126,6 +137,22 @@ public class Application implements EntryPoint {
 		layoutWest.addMember(layerTree);
 		layoutCenter.addMember(map);
 
+
+		// @extract-start ClientConfigurationLoader, Replace the client configuration loader
+		/*ClientConfigurationService.setConfigurationLoader(new ClientConfigurationLoader() {
+			public void loadClientApplicationInfo(final String applicationId, final ClientConfigurationSetter setter) {
+				GwtCommand commandRequest = new GwtCommand(AppConfigurationRequest.COMMAND);
+				commandRequest.setCommandRequest(new AppConfigurationRequest(applicationId));
+				GwtCommandDispatcher.getInstance().execute(commandRequest,
+					new AbstractCommandCallback<AppConfigurationResponse>() {
+						public void execute(AppConfigurationResponse response) {
+							setter.set(applicationId, response.getApplication());
+						}
+				});
+			}
+});*/
+		// @extract-end
+
 		mainLayout.draw();
 
 		initialize();
@@ -169,7 +196,7 @@ public class Application implements EntryPoint {
 		headerLayout.setHeight(5 + 52 + 5);
 
 		Layout topBlackBar = new Layout();
-	    topBlackBar.addStyleName("applicationLayoutHeaderBar");
+		topBlackBar.addStyleName("applicationLayoutHeaderBar");
 		topBlackBar.setHeight(5);
 
 		HLayout header = new HLayout();
@@ -187,7 +214,7 @@ public class Application implements EntryPoint {
 		return headerLayout;
 	}
 
-	private void initializeConstants() {// register Global layout stuff
+	private void initializeConstants() { // register Global layout stuff
 		GuwLayout.ribbonBarInternalMargin = 2;
 		GuwLayout.ribbonGroupInternalMargin = 4;
 

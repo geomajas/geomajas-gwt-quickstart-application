@@ -100,7 +100,25 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+            <dependency>
+                <groupId>org.geomajas.plugin</groupId>
+                <artifactId>geomajas-plugin-staticsecurity-all</artifactId>
+                <version>1.10.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.geomajas.plugin</groupId>
+                <artifactId>geomajas-plugin-staticsecurity-gwt</artifactId>
+                <version>1.10.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.geomajas.plugin</groupId>
+                <artifactId>geomajas-plugin-staticsecurity</artifactId>
+                <version>1.10.0-SNAPSHOT</version>
+            </dependency>
 		</dependencies>
+
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
@@ -165,6 +183,11 @@
 			<groupId>org.geomajas.plugin</groupId>
 			<artifactId>geomajas-plugin-printing-gwt</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.geomajas.plugin</groupId>
+            <artifactId>geomajas-layer-tms</artifactId>
+        </dependency>
+
 		<!-- extra functionality -->
 		<dependency>
 			<groupId>org.geomajas.widget</groupId>
@@ -265,6 +288,12 @@
 			<version>4.0</version>
 		</dependency>
 		-->
+
+        <!-- plugins -->
+        <dependency>
+            <groupId>org.geomajas.plugin</groupId>
+            <artifactId>geomajas-plugin-staticsecurity-gwt</artifactId>
+        </dependency>
 
 		<!-- Google dependencies -->
 		<dependency>
