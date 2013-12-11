@@ -21,7 +21,7 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd"
         >
 
     <bean name="layerSimplifiedCountriesTms" class="org.geomajas.layer.tms.TmsLayer">
-        <property name="baseTmsUrl" value="http://apps.geomajas.org/geoserver/gwc/service/tms/1.0.0/geomajas:simplified_country_borders@EPSG:900913@png" />
+        <property name="baseTmsUrl" value="http://apps.geomajas.org/geoserver/gwc/service/tms/1.0.0/demo_world:simplified_country_borders@EPSG:900913@png" />
     </bean>
 
 </beans>
