@@ -178,10 +178,22 @@
 		<dependency>
 			<groupId>org.geomajas.plugin</groupId>
 			<artifactId>geomajas-plugin-printing</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>jai_core</artifactId>
+					<groupId>javax.media</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.geomajas.plugin</groupId>
 			<artifactId>geomajas-plugin-printing-gwt</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>jai_core</artifactId>
+					<groupId>javax.media</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
         <dependency>
             <groupId>org.geomajas.plugin</groupId>
