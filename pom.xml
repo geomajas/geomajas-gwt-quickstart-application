@@ -510,7 +510,7 @@
 				<dependency>
 					<groupId>org.geomajas</groupId>
 					<artifactId>geomajas-jetty-runner</artifactId>
-					<version>1.0.0</version>
+					<version>${geomajas-build-tools-version}</version>
 				</dependency>
 				<dependency>
 					<groupId>com.google.gwt</groupId>
@@ -568,6 +568,7 @@
 		<gwt-version>2.5.0</gwt-version>
 		<gwt.compiler.skip>false</gwt.compiler.skip>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<geomajas-build-tools-version>2.0.0</geomajas-build-tools-version>
 	</properties>
 
 </project>
