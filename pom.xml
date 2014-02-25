@@ -21,13 +21,11 @@
 	<description>Geomajas SmartGWT application</description>
 	<url>http://www.geomajas.org/</url>
 
-	<!-- @todo required for sample applications which are included in the Geomajas project, fix or delete
 	<scm>
-		<connection>scm:svn:https://svn.geomajas.org/majas/trunk/application/geomajas-dojo-example</connection>
-		<developerConnection>scm:svn:https://svn.geomajas.org/majas/trunk/application/geomajas-dojo-example</developerConnection>
-		<url>http://ci.geomajas.org/svn/repos/Geomajas/list/trunk/application/geomajas-dojo-example</url>
+		<connection>scm:git:git@github.com:geomajas/geomajas-application-smargwt-archetype.git</connection>
+		<developerConnection>scm:git:git@github.com:geomajas/geomajas-application-smargwt-archetype.git</developerConnection>
+		<url>https://github.com/geomajas/geomajas-application-smargwt-archetype.git</url>
 	</scm>
-	-->
 
 	<licenses>
 		<license>
