@@ -53,6 +53,9 @@
             WEB-INF/layer/SHP/layerCountriesWithFlag.xml
             WEB-INF/layer/SHP/clientLayerCountriesWithFlag.xml
 
+			WEB-INF/layer/SHP/layerRailRoads.xml
+			WEB-INF/layer/SHP/clientLayerRailRoads.xml
+
 			<!-- widgets -->
 			WEB-INF/widget/layerTree.xml
 			WEB-INF/widget/ribbonToolbar.xml
