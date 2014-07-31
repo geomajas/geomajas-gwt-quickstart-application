@@ -50,71 +50,13 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- bugfix for transaction problem -->
 			<dependency>
-				<groupId>org.geotools</groupId>
-				<artifactId>gt-data</artifactId>
-				<version>2.7.5-GEOT-4394</version>
-			</dependency>
-			<dependency>
-				<groupId>org.geomajas</groupId>
-				<artifactId>geomajas-dep</artifactId>
-				<version>${geomajas-dep-version}</version>
+				<groupId>org.geomajas.project</groupId>
+				<artifactId>geomajas-project-client-gwt</artifactId>
+				<version>${geomajas-client-gwt-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.geomajas.plugin</groupId>
-				<artifactId>geomajas-widget-featureinfo-all</artifactId>
-				<version>1.0.0-M2</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.geomajas.plugin</groupId>
-				<artifactId>geomajas-widget-advancedviews-all</artifactId>
-				<version>1.0.0-M3</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.geomajas.plugin</groupId>
-				<artifactId>geomajas-widget-layer-all</artifactId>
-				<version>1.0.0-M5</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.geomajas.plugin</groupId>
-				<artifactId>geomajas-widget-utility-all</artifactId>
-				<version>1.0.0-M4</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.geomajas.plugin</groupId>
-				<artifactId>geomajas-widget-searchandfilter-all</artifactId>
-				<version>1.0.0-M5</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-            <dependency>
-                <groupId>org.geomajas.plugin</groupId>
-                <artifactId>geomajas-plugin-staticsecurity-all</artifactId>
-                <version>1.10.0-SNAPSHOT</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.geomajas.plugin</groupId>
-                <artifactId>geomajas-plugin-staticsecurity-gwt</artifactId>
-                <version>1.10.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>org.geomajas.plugin</groupId>
-                <artifactId>geomajas-plugin-staticsecurity</artifactId>
-                <version>1.10.0-SNAPSHOT</version>
-            </dependency>
 		</dependencies>
 
 	</dependencyManagement>
@@ -129,9 +71,15 @@
 			<groupId>org.geomajas</groupId>
 			<artifactId>geomajas-gwt-client</artifactId>
 		</dependency>
+
+		<!-- layers -->
 		<dependency>
 			<groupId>org.geomajas.plugin</groupId>
 			<artifactId>geomajas-layer-openstreetmap</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.geomajas.plugin</groupId>
+			<artifactId>geomajas-layer-googlemaps</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.geomajas.plugin</groupId>
@@ -142,17 +90,16 @@
 			<artifactId>geomajas-layer-wms</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>org.geomajas.plugin</groupId> <!-- needed because of problem with WMS layer -->
-		    <artifactId>geomajas-plugin-caching</artifactId>
+			<groupId>org.geomajas.plugin</groupId>
+			<artifactId>geomajas-layer-tms</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.geomajas</groupId>
 			<artifactId>geomajas-testdata</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.geomajas.plugin</groupId>
-			<artifactId>geomajas-plugin-rasterizing</artifactId>
-		</dependency>
+
+		<!-- widgets -->
 		<dependency>
 			<groupId>org.geomajas.widget</groupId>
 			<artifactId>geomajas-widget-utility-gwt</artifactId>
@@ -167,36 +114,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.geomajas.plugin</groupId>
-			<artifactId>geomajas-layer-google</artifactId>
+			<artifactId>geomajas-plugin-print-gwt</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.geomajas.plugin</groupId>
-			<artifactId>geomajas-layer-openstreetmap</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.geomajas.plugin</groupId>
-			<artifactId>geomajas-plugin-printing</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>jai_core</artifactId>
-					<groupId>javax.media</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.geomajas.plugin</groupId>
-			<artifactId>geomajas-plugin-printing-gwt</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>jai_core</artifactId>
-					<groupId>javax.media</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-        <dependency>
-            <groupId>org.geomajas.plugin</groupId>
-            <artifactId>geomajas-layer-tms</artifactId>
-        </dependency>
 
 		<!-- extra functionality -->
 		<dependency>
@@ -418,7 +337,7 @@
 					<dependency>
 						<groupId>org.geomajas</groupId>
 						<artifactId>geomajas-checkstyle</artifactId>
-						<version>1.0.6</version>
+						<version>2.1.0</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -649,9 +568,9 @@
 	</pluginRepositories>
 
 	<properties>
-		<geomajas-dep-version>1.13.38</geomajas-dep-version>
+		<geomajas-client-gwt-version>1.15.0-SNAPSHOT</geomajas-client-gwt-version>
 		<geotools-version>9.5</geotools-version>
-		<gwt-version>2.5.0</gwt-version>
+		<gwt-version>2.5.1</gwt-version>
 		<gwt.compiler.skip>false</gwt.compiler.skip>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<geomajas-build-tools-version>2.0.0</geomajas-build-tools-version>
