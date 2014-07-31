@@ -21,7 +21,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			<!-- framework context -->
-			classpath:org/geomajas/spring/geomajasContext.xml
+			classpath*:org/geomajas/spring/geomajasContext*.xml
 			classpath:org/geomajas/plugin/rasterizing/DefaultCachedAndRasterizedPipelines.xml
 
             <!-- cache location -->
@@ -95,7 +95,7 @@
 		<init-param>
 			<description>Spring Web-MVC specific (additional) context files.</description>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath*:META-INF/geomajasWebContext.xml</param-value>
+			<param-value>classpath*:META-INF/geomajasWebContext*.xml</param-value>
 		</init-param>
 		<load-on-startup>3</load-on-startup>
 	</servlet>
