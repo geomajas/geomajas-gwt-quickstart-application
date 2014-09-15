@@ -33,22 +33,22 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 								class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 							<property name="layerId" value="clientLayerOsm" />
 						</bean>
-						<!-- <bean class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
+						 <bean class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 								<property name="layerId" value="clientLayerSimplifiedCountriesTms" />
-							</bean>   -->
+							</bean>
 
-						<!--<bean class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
+						<bean class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 							<property name="layerId" value="clientLayerSimplifiedCountriesWms" />
-						</bean> -->
+						</bean>
 
-                        <!-- <bean
+                         <bean
                                 class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
                             <property name="layerId" value="clientLayerSimplifiedCountriesWfs" />
-                        </bean>  -->
-						<!--<bean
+                        </bean>
+						<bean
 								class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
 							<property name="layerId" value="clientLayerCountries" />
-						</bean>-->
+						</bean>
                         <bean
                                 class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
                             <property name="layerId" value="clientLayerCountriesWithFlag" />
@@ -57,6 +57,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
                                 class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
                             <property name="layerId" value="clientLayerCities" />
                         </bean>
+						<bean
+								class="org.geomajas.widget.layer.configuration.client.ClientLayerNodeInfo">
+							<property name="layerId" value="clientLayerRailRoads" />
+						</bean>
 					</list>
 				</property>
 			</bean>
