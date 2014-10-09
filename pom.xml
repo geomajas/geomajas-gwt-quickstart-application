@@ -447,23 +447,8 @@
 							<cargo.remote.uri>${dev.deploy.uri}</cargo.remote.uri>
 						</properties>
 					</configuration>
-					<deployer>
-						<deployables>
-							<deployable>
-								<groupId>org.geomajas</groupId>
-								<artifactId>geomajas-gwt-quickstart-application</artifactId>
-								<type>war</type>
-								<properties>
-									<context>enduser-application-gwt-trunk</context>
-								</properties>
-							</deployable>
-						</deployables>
-					</deployer>
-
 				</configuration>
 			</plugin>
-			
-
 		</plugins>
 		<pluginManagement>
 			<plugins>
