@@ -9,7 +9,7 @@
  * details, see LICENSE.txt in the project root.
  */
 
-package org.mypackage.client.gui;
+package org.geomajas.quickstart.gwt.client.gui;
 
 
 import org.geomajas.gwt.client.map.MapModel;
