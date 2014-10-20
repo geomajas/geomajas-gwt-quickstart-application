@@ -8,7 +8,7 @@
  * by the Geomajas Contributors License Agreement. For full licensing
  * details, see LICENSE.txt in the project root.
  */
-package org.mypackage.client;
+package org.geomajas.quickstart.gwt.client;
 
 import org.geomajas.gwt.client.Geomajas;
 import org.geomajas.gwt.client.controller.ZoomInAndOutController;
