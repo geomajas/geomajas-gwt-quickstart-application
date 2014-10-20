@@ -593,7 +593,7 @@
 	</pluginRepositories>
 
 	<properties>
-		<geomajas-client-gwt-version>1.15.0-SNAPSHOT</geomajas-client-gwt-version>
+		<geomajas-client-gwt-version>1.15.1</geomajas-client-gwt-version>
 		<geotools-version>9.5</geotools-version>
 		<gwt-version>2.5.1</gwt-version>
 		<gwt.compiler.skip>false</gwt.compiler.skip>
