@@ -34,19 +34,28 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	
+	<distributionManagement>
+		<repository>
+			<id>sonatype-nexus-staging</id>
+			<name>Nexus Release Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+		<snapshotRepository>
+			<id>geomajas-nexus-snapshots</id>
+			<name>Geomajas Nexus Snapshot</name>
+			<url>http://apps.geomajas.org/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
-	<!-- @todo you probably want to set the developers, otherwise it inherits from the parent if any
 	<developers>
 		<developer>
-			<id>jd</id>
-			<name>John Doe</name>
-			<email>john.doe@acmee.com</email>
-			<roles>
-				<role>Module maintainer</role>
-			</roles>
+			<id>oliverm</id>
+			<name>Oliver May</name>
+			<email>oliver.may@dfc.be</email>
 		</developer>
 	</developers>
-	-->
+
 
 	<dependencyManagement>
 		<dependencies>
@@ -483,6 +492,16 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.1</version>
+					<configuration>
+						<mavenExecutorId>forked-path</mavenExecutorId>
+						<useReleaseProfile>false</useReleaseProfile>
+						<arguments>-Psonatype-oss-release</arguments>
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
@@ -522,6 +541,27 @@
 			<properties>
 				<gwt.compiler.skip>true</gwt.compiler.skip>
 			</properties>
+		</profile>
+		<profile>
+			<id>sonatype-oss-release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.1</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 
