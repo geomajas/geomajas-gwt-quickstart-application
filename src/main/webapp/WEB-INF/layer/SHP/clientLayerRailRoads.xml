@@ -23,7 +23,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<bean class="org.geomajas.configuration.client.ClientVectorLayerInfo"
 		id="clientLayerRailRoads">
 		<property name="serverLayerId" value="layerRailRoads" />
-		<property name="label" value="RailRoads" />
+		<property name="label" value="RailRoads (SHP)" />
 		<property name="visible" value="true" />
 		<property name="maximumScale" value="1:1000" />
 		<property name="minimumScale" value="1:500000000" />
