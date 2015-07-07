@@ -1,13 +1,15 @@
 language: java
+sudo: false
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - "git clone https://github.com/geomajas/geomajas-build-tools target/geomajas-build-tools"
+  - "git clone https://github.com/geomajas/geomajas-build-tools target/geomajas-build-tools -q"
+  - "echo \"export MAVEN_OPTS='-Dmaven.repo.local=$HOME/.m2/repository -Xmx1024m -XX:MaxPermSize=1024m -Dgwt.compiler.localWorkers=2'\" > ~/.mavenrc"
 jdk:
   - oraclejdk7
 cache:
   directories:
   - $HOME/.m2
 install: true
-script: "mvn verify -B -V --settings target/geomajas-build-tools/settings.xml"
-env: MAVEN_OPTS="-XX:MaxPermSize=512m"
+script: 
+  - mvn verify -B -V --settings target/geomajas-build-tools/settings.xml -q
