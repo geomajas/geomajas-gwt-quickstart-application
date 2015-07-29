@@ -27,12 +27,14 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 			<list>
 				<bean
 						class="org.geomajas.widget.advancedviews.configuration.client.themes.ViewConfig">
+                    <property name="icon" value="images/OSM_theme.png" />
 					<property name="title" value="OpenStreetMaps" />
 					<property name="description" value="Community driven map of the world." />
 					<property name="rangeConfigs">
 						<list>
 							<bean
 									class="org.geomajas.widget.advancedviews.configuration.client.themes.RangeConfig">
+                                <property name="icon" value="images/OSM_theme.png" />
 								<property name="minimumScale">
 									<bean class="org.geomajas.configuration.client.ScaleInfo">
 										<property name="numerator" value="1" />
@@ -61,13 +63,15 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 				</bean>
 				<bean
 						class="org.geomajas.widget.advancedviews.configuration.client.themes.ViewConfig">
+                    <property name="icon" value="images/OSM_SHP_theme.png" />
 					<property name="title" value="OpenStreetMaps + SHP" />
 					<property name="description" value="Community driven map of the world + SHP." />
 					<property name="rangeConfigs">
 						<list>
 							<bean
 									class="org.geomajas.widget.advancedviews.configuration.client.themes.RangeConfig">
-								<property name="minimumScale">
+                                <property name="icon" value="images/OSM_SHP_theme.png" />
+                                <property name="minimumScale">
 									<bean class="org.geomajas.configuration.client.ScaleInfo">
 										<property name="numerator" value="1" />
 										<property name="denominator" value="1000000000" />
@@ -93,12 +97,24 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 											<property name="visible" value="true" />
 											<property name="opacity" value="0.7" />
 										</bean>
+                                        <bean
+                                                class="org.geomajas.widget.advancedviews.configuration.client.themes.LayerConfig">
+                                            <property name="layer" ref="clientLayerCountries" />
+                                            <property name="visible" value="true" />
+                                            <property name="opacity" value="0.7" />
+                                        </bean>
 										<bean
 												class="org.geomajas.widget.advancedviews.configuration.client.themes.LayerConfig">
 											<property name="layer" ref="clientLayerCities" />
 											<property name="visible" value="true" />
 											<property name="opacity" value="0.7" />
 										</bean>
+                                        <bean
+                                                class="org.geomajas.widget.advancedviews.configuration.client.themes.LayerConfig">
+                                            <property name="layer" ref="clientLayerRailRoads" />
+                                            <property name="visible" value="true" />
+                                            <property name="opacity" value="0.7" />
+                                        </bean>
 									</list>
 								</property>
 							</bean>
